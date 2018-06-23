@@ -437,8 +437,7 @@ class MobiBook:
         if 406 in self.meta_array:
             data406 = self.meta_array[406]
             val406, = struct.unpack('>Q',data406)
-            if val406 != 0:
-                raise DrmException(u"Cannot decode library or rented ebooks.")
+            print u"It seems you are trying to decrypt a library/rented ebook, please keep in mind this may be a violation of the copyright law in your country."
 
         goodpids = []
         for pid in pidlist:
